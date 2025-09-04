@@ -16,7 +16,7 @@ const iconMap = {
 export function DonationGoals() {
   const { totalUSD, isLoading, error, eth, usdc, btc } = useDonationBalances();
   
-  // Use real donation amount for the first goal (Computer Equipment)
+  // Use real donation amount for the active goal (currently Yearly Rent - second goal)
   const realRaised = Math.round(totalUSD);
   
   return (
@@ -57,34 +57,44 @@ export function DonationGoals() {
           <div className="space-y-6">
             {data.donationGoals.goals.map((goal, index) => {
               const Icon = iconMap[goal.icon as keyof typeof iconMap];
-              const isFirstGoal = index === 0;
+              const isCompleted = goal.status === "completed";
               const isActive = goal.status === "active";
-              const currentRaised = isFirstGoal ? realRaised : goal.raised;
-              const progress = isFirstGoal ? (currentRaised / goal.target) * 100 : 0;
+              const currentRaised = isActive ? realRaised : goal.raised;
+              const progress = isCompleted ? 100 : isActive ? (currentRaised / goal.target) * 100 : 0;
               
               return (
                 <Card key={goal.id} className={`transition-all duration-300 ${
-                  isActive 
+                  isCompleted
+                    ? "bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800 hover:shadow-lg"
+                    : isActive 
                     ? "hover:shadow-lg border-primary/20" 
                     : "opacity-50 grayscale hover:opacity-75"
                 }`}>
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className={`p-3 rounded-lg ${
+                        isCompleted ? "bg-green-100 dark:bg-green-900/30" :
                         isActive ? "bg-primary/10" : "bg-muted/50"
                       }`}>
                         <Icon className={`h-6 w-6 ${
+                          isCompleted ? "text-green-600 dark:text-green-400" :
                           isActive ? "text-primary" : "text-muted-foreground"
                         }`} />
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center gap-2 mb-2">
                           <h3 className={`text-lg font-semibold ${
+                            isCompleted ? "text-green-700 dark:text-green-300" :
                             isActive ? "" : "text-muted-foreground"
                           }`}>
                             {goal.title}
                           </h3>
-                          {!isActive && (
+                          {isCompleted && (
+                            <span className="text-xs px-2 py-1 bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300 rounded-full font-medium">
+                              ✓ Completed
+                            </span>
+                          )}
+                          {!isActive && !isCompleted && (
                             <span className="text-xs px-2 py-1 bg-muted/50 text-muted-foreground rounded-full">
                               Coming Soon
                             </span>
@@ -96,19 +106,22 @@ export function DonationGoals() {
                         
                         <div className="space-y-2">
                           <div className="flex justify-between text-sm">
-                            <span className={`font-medium ${isActive ? "text-primary" : "text-muted-foreground"}`}>
+                            <span className={`font-medium ${
+                              isCompleted ? "text-green-600 dark:text-green-400" :
+                              isActive ? "text-primary" : "text-muted-foreground"
+                            }`}>
                               ${currentRaised.toLocaleString()} raised
                             </span>
                             <span className="font-medium">${goal.target.toLocaleString()}</span>
                           </div>
-                          <Progress value={progress} className="h-2" />
+                          <Progress value={progress} className={`h-2 ${isCompleted ? "[&>div]:bg-green-500" : ""}`} />
                           <div className="flex justify-between text-xs text-muted-foreground">
                             <span>{progress.toFixed(1)}% funded</span>
                             <span className="font-medium">
-                              ${(goal.target - currentRaised).toLocaleString()} needed
+                              {isCompleted ? "🎉 Goal achieved!" : `$${(goal.target - currentRaised).toLocaleString()} needed`}
                             </span>
                           </div>
-                          {isFirstGoal && !isLoading && (
+                          {isActive && !isLoading && (
                             <div className="mt-3 p-3 bg-muted/30 rounded-lg text-xs space-y-1">
                               <div className="font-medium text-muted-foreground mb-2">Live balances:</div>
                               <div className="grid grid-cols-2 gap-2">
@@ -142,7 +155,7 @@ export function DonationGoals() {
                           )}
                         </div>
                         
-                        {isFirstGoal && (
+                        {isActive && (
                           <div className="mt-6 pt-4 border-t border-border">
                             <Button 
                               variant="default" 

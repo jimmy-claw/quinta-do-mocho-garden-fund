@@ -30,10 +30,10 @@
         "title": "Computer Equipment",
         "description": "10 Raspberry Pi computers with accessories for hands-on learning",
         "target": 2000,
-        "raised": 0,
+        "raised": 2000,
         "icon": "Monitor",
         "priority": 1,
-        "status": "active"
+        "status": "completed"
       },
       {
         "id": 2,
@@ -43,7 +43,7 @@
         "raised": 0,
         "icon": "Home",
         "priority": 2,
-        "status": "pending"
+        "status": "active"
       },
       {
         "id": 3,
