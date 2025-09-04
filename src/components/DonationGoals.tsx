@@ -1,7 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
-import { Monitor, Home, Plane, Mountain, Building2, Heart, Loader2 } from "lucide-react";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Monitor, Home, Plane, Mountain, Building2, Heart, Loader2, FileText, ChevronDown, ExternalLink } from "lucide-react";
 import { useDonationBalances } from "@/hooks/useDonationBalances";
 import data from "@/data.json";
 
@@ -167,6 +168,43 @@ export function DonationGoals() {
                               Donate
                             </Button>
                           </div>
+                        )}
+                        
+                        {/* Proofs section */}
+                        {goal.proofs && goal.proofs.length > 0 && (
+                          <Collapsible className="mt-4">
+                            <CollapsibleTrigger className="flex items-center gap-2 w-full text-left py-2 hover:text-primary transition-colors">
+                              <FileText className="h-4 w-4" />
+                              <span className="text-sm font-medium">
+                                View Invoices & Receipts ({goal.proofs.length})
+                              </span>
+                              <ChevronDown className="h-4 w-4 ml-auto transition-transform data-[state=open]:rotate-180" />
+                            </CollapsibleTrigger>
+                            <CollapsibleContent className="space-y-2 pt-2">
+                              {goal.proofs.map((proof, proofIndex) => (
+                                <div key={proofIndex} className="p-3 bg-muted/30 rounded-lg border border-border/50">
+                                  <div className="flex items-start justify-between gap-3">
+                                    <div className="flex-1 min-w-0">
+                                      <h4 className="font-medium text-sm mb-1">{proof.title}</h4>
+                                      <p className="text-xs text-muted-foreground mb-2">{proof.description}</p>
+                                      <div className="text-xs text-muted-foreground">
+                                        Date: {new Date(proof.date).toLocaleDateString()}
+                                      </div>
+                                    </div>
+                                    <Button
+                                      variant="outline"
+                                      size="sm"
+                                      className="flex-shrink-0"
+                                      onClick={() => window.open(proof.pdfUrl, '_blank')}
+                                    >
+                                      <ExternalLink className="h-3 w-3 mr-1" />
+                                      View PDF
+                                    </Button>
+                                  </div>
+                                </div>
+                              ))}
+                            </CollapsibleContent>
+                          </Collapsible>
                         )}
                       </div>
                     </div>

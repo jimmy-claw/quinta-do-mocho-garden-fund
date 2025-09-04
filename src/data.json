@@ -33,17 +33,32 @@
         "raised": 2000,
         "icon": "Monitor",
         "priority": 1,
-        "status": "completed"
+        "status": "completed",
+        "proofs": [
+          {
+            "title": "Raspberry Pi Purchase Receipt",
+            "description": "Invoice for 10 Raspberry Pi 4 Model B computers with SD cards, cases, and power supplies",
+            "date": "2024-08-15",
+            "pdfUrl": "/invoices/raspberry-pi-purchase-2024-08.pdf"
+          },
+          {
+            "title": "Accessories and Setup Costs",
+            "description": "Additional equipment including monitors, keyboards, mice, and educational software licenses",
+            "date": "2024-08-20",
+            "pdfUrl": "/invoices/computer-accessories-2024-08.pdf"
+          }
+        ]
       },
       {
         "id": 2,
         "title": "Yearly Rent",
-        "description": "Secure the school location for another year of education",
+        "description": "Secure the school location for another year of education", 
         "target": 1500,
         "raised": 0,
         "icon": "Home",
         "priority": 2,
-        "status": "active"
+        "status": "active",
+        "proofs": []
       },
       {
         "id": 3,
@@ -53,7 +68,8 @@
         "raised": 0,
         "icon": "Building2",
         "priority": 3,
-        "status": "pending"
+        "status": "pending",
+        "proofs": []
       },
       {
         "id": 4,
@@ -63,7 +79,8 @@
         "raised": 0,
         "icon": "Plane",
         "priority": 4,
-        "status": "pending"
+        "status": "pending",
+        "proofs": []
       },
       {
         "id": 5,
@@ -73,7 +90,8 @@
         "raised": 0,
         "icon": "Mountain",
         "priority": 5,
-        "status": "pending"
+        "status": "pending",
+        "proofs": []
       }
     ]
   },
