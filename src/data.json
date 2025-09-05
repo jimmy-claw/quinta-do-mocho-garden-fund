@@ -37,15 +37,9 @@
         "proofs": [
           {
             "title": "Raspberry Pi Purchase Receipt",
-            "description": "Invoice for 10 Raspberry Pi 4 Model B computers with SD cards, cases, and power supplies",
-            "date": "2024-08-15",
-            "pdfUrl": "/invoices/raspberry-pi-purchase-2024-08.pdf"
-          },
-          {
-            "title": "Accessories and Setup Costs",
-            "description": "Additional equipment including monitors, keyboards, mice, and educational software licenses",
-            "date": "2024-08-20",
-            "pdfUrl": "/invoices/computer-accessories-2024-08.pdf"
+            "description": "Invoice for 10 Raspberry Pi 5 8GB computers with SD cards, cases, and power supplies",
+            "date": "2024-08-25",
+            "pdfUrl": "/invoices/Digitec_Auftragsbestätigung_157318426.pdf"
           }
         ]
       },
