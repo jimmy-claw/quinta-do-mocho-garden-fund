@@ -10,7 +10,7 @@ export function AboutSection() {
             About the
             <br />
             <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent whitespace-nowrap">
-              Straight Training Center
+              Quinta do Mocho Community Garden
             </span>
           </h2>
           
@@ -30,13 +30,13 @@ export function AboutSection() {
                 <Card>
                   <CardContent className="p-4 text-center">
                     <div className="text-2xl font-bold text-primary mb-1">{data.about.stats.studentsServed}</div>
-                    <div className="text-sm text-muted-foreground">Students Served</div>
+                    <div className="text-sm text-muted-foreground">Location</div>
                   </CardContent>
                 </Card>
                 <Card>
                   <CardContent className="p-4 text-center">
                     <div className="text-2xl font-bold text-secondary mb-1">{data.about.stats.yearsOperating}</div>
-                    <div className="text-sm text-muted-foreground">Years Operating</div>
+                    <div className="text-sm text-muted-foreground">Volunteer Day</div>
                   </CardContent>
                 </Card>
               </div>

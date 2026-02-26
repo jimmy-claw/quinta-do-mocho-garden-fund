@@ -1,297 +1,220 @@
 {
-  "siteTitle": "Straight Training Center",
+  "siteTitle": "Quinta do Mocho Community Garden",
   "about": {
-    "title": "About the Straight Training Center",
-    "description1": "Our aim is to support the community in Fuoni Mambosasa in educational matters, especially learning English. We help people who live challenging lives by teaching them to read and write, and learn different languages to create employment opportunities for themselves, including becoming tour guides in the tourism industry.",
-    "description2": "We also support children who need help with school subjects so they can excel in their education. Our focus is on providing quality educational opportunities that empower young minds with practical skills for successful futures.",
+    "title": "About Quinta do Mocho",
+    "description1": "Quinta do Mocho is a public housing neighbourhood in Sacavém, just outside Lisbon. Built in the 1990s to rehouse families from informal settlements, it is one of many bairros sociais created through Portugal's urban social housing policies. Today, it is home to a vibrant African diaspora community — especially families with Cape Verdean, Angolan, and Guinean-Portuguese heritage.",
+    "description2": "Music, food, art, and strong intergenerational ties are central to daily life here. Despite economic challenges and high youth unemployment, the neighbourhood is full of talent. Musicians, dancers, designers, and athletes from Mocho have gained recognition both nationally and internationally. The potential is here — it just needs space to grow.",
     "stats": {
-      "studentsServed": "200+",
-      "yearsOperating": "10"
+      "studentsServed": "Sacavém",
+      "yearsOperating": "March 9th"
     },
     "activities": {
-      "title": "Our Activities",
-      "description": "We teach English to children and teenagers from Fuoni Mambosasa every evening from 7pm to 9pm, especially those from disadvantaged backgrounds or orphans, providing opportunities to practice through debates, role plays, theatres, and games."
+      "title": "The Community Garden",
+      "description": "Together with the local association Mocho+, residents of Quinta do Mocho, Hortas Comunitárias, and the Logos Circle Lisbon, we are building an urban community garden. The garden will grow vegetables, herbs, and edible plants; teach young people how to grow food; supply fresh ingredients to the community centre kitchen; and create a shared space for learning, collaboration, and pride."
     },
     "safeSpace": {
-      "title": "Safe Learning Space",
-      "description": "We provide students with a safe space to express themselves, feel at home, belong to a family-like community, have role models and peers, and most importantly, have fun while learning."
+      "title": "Volunteer Day – March 9th, 10:00 AM",
+      "description": "Join us on the first planting day! We'll be clearing and preparing the land, building the first garden beds, and planting the first vegetables and herbs. You'll work alongside local residents and the Hortas Comunitárias team. Come get your hands dirty and help us start something that will grow for years to come."
     },
     "impact": {
-      "title": "Our Impact",
-      "description": "Creating employment opportunities through language skills, supporting academic success, and building a stronger, more educated community in Fuoni Mambosasa."
+      "title": "Our Partners",
+      "description": "This project is a collaboration between Mocho+, residents of Quinta do Mocho, Hortas Comunitárias, and the Logos Circle Lisbon — combining local knowledge, community energy, and practical expertise to make the garden a lasting success."
     }
   },
   "donationGoals": {
     "title": "Our Goals",
-    "subtitle": "These are the initiatives we're working towards to better serve our community in Fuoni Mambosasa.",
+    "subtitle": "Every euro goes directly toward making the garden functional and sustainable. Three concrete goals, fully transparent.",
     "goals": [
       {
         "id": 1,
-        "title": "Computer Equipment",
-        "description": "10 Raspberry Pi computers with accessories for hands-on learning",
-        "target": 2000,
-        "raised": 2000,
-        "icon": "Monitor",
-        "priority": 1,
-        "status": "completed",
-        "proofs": [
-          {
-            "title": "Raspberry Pi Purchase Receipt",
-            "description": "Invoice for 10 Raspberry Pi 5 8GB computers with SD cards, cases, and power supplies",
-            "date": "2024-08-25",
-            "pdfUrl": "/invoices/Digitec_Auftragsbestätigung_157318426.pdf"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "title": "Yearly Rent",
-        "description": "Secure the school location for another year of education", 
-        "target": 1500,
+        "title": "Seeds & Starter Plants",
+        "description": "Funding the initial seeds and starter plants supplied by Hortas Comunitárias",
+        "target": 300,
         "raised": 0,
-        "icon": "Home",
-        "priority": 2,
+        "icon": "Mountain",
+        "priority": 1,
         "status": "active",
         "proofs": []
       },
       {
+        "id": 2,
+        "title": "Gardening Tools",
+        "description": "Essential tools for planting, maintaining, and sustaining the garden",
+        "target": 300,
+        "raised": 0,
+        "icon": "Home",
+        "priority": 2,
+        "status": "pending",
+        "proofs": []
+      },
+      {
         "id": 3,
-        "title": "Own Building",
-        "description": "Purchase our own building for long-term stability and growth",
-        "target": 10000,
+        "title": "Garden Gate & Materials",
+        "description": "Materials to build a protective gate around the garden area",
+        "target": 250,
         "raised": 0,
         "icon": "Building2",
         "priority": 3,
-        "status": "pending",
-        "proofs": []
-      },
-      {
-        "id": 4,
-        "title": "Student Trip",
-        "description": "Educational trip for all students to broaden their horizons",
-        "target": 500,
-        "raised": 0,
-        "icon": "Plane",
-        "priority": 4,
-        "status": "pending",
-        "proofs": []
-      },
-      {
-        "id": 5,
-        "title": "Teenage Camp",
-        "description": "Special summer camp for teenage students with advanced training",
-        "target": 1000,
-        "raised": 0,
-        "icon": "Mountain",
-        "priority": 5,
         "status": "pending",
         "proofs": []
       }
     ]
   },
   "donationMethods": {
-    "title": "Make a Donation",
-    "subtitle": "Choose your preferred cryptocurrency to support the Straight Training Center. All donations go directly to improving education for our students.",
+    "title": "Help Us Plant Food, Skills & Opportunity",
+    "subtitle": "Choose your preferred way to support the Quinta do Mocho Community Garden. All donations go directly to seeds, tools, and materials.",
     "currencyOptions": [
       { "value": "eth", "label": "Ethereum (ETH)", "icon": "⟠" },
       { "value": "usdc", "label": "USD Coin (USDC)", "icon": "💵" },
       { "value": "btc", "label": "Bitcoin (BTC)", "icon": "₿" },
       { "value": "other", "label": "Other Cryptocurrencies", "icon": "🔄" },
-      { "value": "eur", "label": "Euro Bank Transfer (EUR)", "icon": "🏦" },
-      { "value": "tzs", "label": "Mobile Money (TZS)", "icon": "📱" }
+      { "value": "eur", "label": "Euro Bank Transfer (EUR)", "icon": "🏦" }
     ],
     "methods": {
       "eth": [
         {
           "type": "Ethereum (ETH)",
-          "address": "0x601c5e1dcb301fe2fd0df34bc96c7237c91d73d8",
-          "explorer": "https://etherscan.io/address/0x601c5e1dcb301fe2fd0df34bc96c7237c91d73d8",
+          "address": "0x0000000000000000000000000000000000000000",
+          "explorer": "https://etherscan.io/address/0x0000000000000000000000000000000000000000",
           "explorerName": "Etherscan",
           "color": "bg-gradient-to-r from-purple-500 to-purple-600",
-          "description": "Send ETH on Ethereum Mainnet or Base Network (same address)",
+          "description": "Send ETH on Ethereum Mainnet or Base Network — wallet address coming soon",
           "networks": ["Ethereum Mainnet", "Base Network"]
         }
       ],
       "usdc": [
         {
           "type": "USDC Stablecoin",
-          "address": "0x601c5e1dcb301fe2fd0df34bc96c7237c91d73d8",
-          "explorer": "https://etherscan.io/token/0xa0b86a33e6e0e5cf1f5872e1b4e6ac1f5d5c2ea6?a=0x601c5e1dcb301fe2fd0df34bc96c7237c91d73d8",
+          "address": "0x0000000000000000000000000000000000000000",
+          "explorer": "https://etherscan.io/address/0x0000000000000000000000000000000000000000",
           "explorerName": "Etherscan",
           "color": "bg-gradient-to-r from-blue-500 to-blue-600",
-          "description": "Send USDC on Ethereum Mainnet or Base Network (same address)",
+          "description": "Send USDC on Ethereum Mainnet or Base Network — wallet address coming soon",
           "networks": ["Ethereum Mainnet", "Base Network"]
         }
       ],
       "btc": [
         {
           "type": "Bitcoin Network",
-          "address": "bc1qduj9sks7d7vct2y8tk4d6ve5frvx33vvftdscw",
-          "explorer": "https://blockstream.info/address/bc1qduj9sks7d7vct2y8tk4d6ve5frvx33vvftdscw",
+          "address": "bc1placeholder000000000000000000000000000000",
+          "explorer": "https://blockstream.info/",
           "explorerName": "Blockstream",
           "color": "bg-gradient-to-r from-orange-500 to-orange-600",
-          "description": "Send Bitcoin to our wallet"
+          "description": "Bitcoin wallet address coming soon"
         }
       ],
       "eur": [
         {
           "type": "Euro Bank Transfer (EUR)",
-          "address": "3014211910745",
+          "address": "PLACEHOLDER — contact @bitzu77 on Telegram",
           "color": "bg-gradient-to-r from-blue-600 to-blue-700",
-          "description": "International bank transfer in Euros (⚠️ 7€ fee per transfer)",
-          "bankDetails": {
-            "currency": "EUR",
-            "accountNumber": "3014211910745",
-            "swiftCode": "EQBLTZTZ",
-            "bankCode": "047",
-            "bankName": "EQUITY BANK TANZANIA LTD",
-            "bankAddress": "ZANZIBAR",
-            "postalAddress": "P.O BOX 110183, DAR ES SALAAM, TANZANIA"
-          }
-        }
-      ],
-      "tzs": [
-        {
-          "type": "Mobile Money (TZS)",
-          "address": "+255678585256",
-          "color": "bg-gradient-to-r from-green-500 to-green-600",
-          "description": "Mobile money transfer in Tanzanian Shillings (Tigopesa - Modest's phone)"
+          "description": "Bank transfer details coming soon — reach out to Amelia (@bitzu77 on Telegram)"
         }
       ]
     }
   },
   "faq": {
     "title": "Frequently Asked Questions",
-    "subtitle": "Find answers to common questions about our project and donation process",
+    "subtitle": "Find answers to common questions about the garden project and how to donate",
     "questions": [
       {
-        "question": "What is the Straight Training Center?",
-        "answer": "The Straight Training Center is an educational institution in Zanzibar focused on providing technology training and vocational education to local students. We aim to bridge the gap between traditional education and modern digital skills."
+        "question": "What is the Quinta do Mocho Community Garden?",
+        "answer": "It is a locally led urban agriculture project in Quinta do Mocho, Sacavém. The garden will grow vegetables and herbs, provide hands-on education for young people, and supply fresh produce to the community centre kitchen. The goal is long-term sustainability, food education, and community empowerment."
       },
       {
         "question": "How will my donation be used?",
-        "answer": "Your donations go directly toward our five main goals: computer equipment (Raspberry Pi systems), yearly rent, educational trips for students, summer camps for teenagers, and eventually purchasing our own building. All funds are used transparently for educational purposes."
+        "answer": "All donations go directly to: seeds and starter plants (Goal 1, €300), gardening tools (Goal 2, €300), and construction materials including a protective gate (Goal 3, €250). Funds are managed in coordination with Mocho+ and project partners to ensure they are used exclusively for the garden."
       },
       {
-        "question": "Why do you accept cryptocurrency donations?",
-        "answer": "Cryptocurrency donations allow us to receive funds quickly and with lower fees compared to traditional international transfers. This is especially important for our location in Zanzibar, where international banking can be challenging."
-      },
-      {
-        "question": "How can I verify that my donation was received?",
-        "answer": "All cryptocurrency transactions are public and can be verified on the blockchain. We provide explorer links for each wallet address where you can check the current balance and transaction history."
-      },
-      {
-        "question": "Can I visit the Straight Training Center?",
-        "answer": "Yes! We welcome visitors who want to see our work firsthand. Please contact us in advance to arrange a visit. We're located in Zanzibar and would be happy to show you our facilities and introduce you to our students."
-      },
-      {
-        "question": "How many students benefit from the training center?",
-        "answer": "We currently serve around 100 students of various ages, from young children learning English to teenagers receiving more advanced education. Your donations help us reach even more students and provide higher quality education."
-      },
-      {
-        "question": "What happens if you exceed your funding goals?",
-        "answer": "Any additional funds will go toward expanding our programs, purchasing more educational materials, hiring additional instructors, or improving our facilities. We believe in continuous improvement and growth."
+        "question": "How can I verify my donation has arrived?",
+        "answer": "All cryptocurrency transactions are public and can be verified on the blockchain. We provide explorer links for each wallet address. You can check that your transaction was received, view the current balance, and see the full transaction history. This ensures complete transparency."
       },
       {
         "question": "Can I donate items instead of money?",
-        "answer": "While we primarily accept cryptocurrency donations, we're always open to discussing donations of educational equipment or materials. Please contact us to discuss what items might be most helpful."
+        "answer": "Yes! We can accept starter plants, seeds, and gardening tools. If you are attending the Volunteer Day on March 9th, feel free to bring items with you. If you cannot attend, contact Amelia on Telegram (@bitzu77) to arrange collection."
       },
       {
-        "question": "How are the wallets managed?",
-        "answer": "Wallets are directly owned and controlled by Straight Training Center community."
+        "question": "What happens on the Volunteer Day on March 9th?",
+        "answer": "On March 9th at 10:00 AM, we will hold the first planting day at the garden. Activities include clearing and preparing the land, building the first garden beds, and planting the first vegetables and herbs. You will work alongside local residents and the Hortas Comunitárias team. All are welcome!"
       },
       {
-        "question": "How are funds converted to local currency?",
-        "answer": "For USDC we have partnered with NedaPay.xyz - a seamless platform for merchants and creators to get paid in local stablecoins. It allows Straight Training Center to convert collected funds (USDC) into local stablecoins and then off ramp to their bank account or a mobile wallet. For BTC we will use local peer-to-peer market to exchange to local currency (TZS) directly."
-      },
-      {
-        "question": "What if I don't have funds on Base, BTC or Bitcoin Lightning?",
-        "answer": "We have integrated Squid Router for your convenience. It supports various chains and tokens and allows you to swap directly to ETH or USDC on Base or Mainnet. You can also set our donation address as a recipient to avoid need for any additional transactions."
+        "question": "Who is behind this project?",
+        "answer": "This is a collaboration between Mocho+ (local community association), residents of Quinta do Mocho, Hortas Comunitárias (urban agriculture experts), and the Logos Circle Lisbon. Together we combine local knowledge, community energy, and practical expertise."
       },
       {
         "question": "Can I remain anonymous?",
-        "answer": "Yes, you can remain anonymous. We do not require any personal information for donations. If you would also like to preserve your on-chain privacy, consider using tools like Railgun, Privacy Pools and similar to break the link from your transaction history and then bridge to Base and donate."
+        "answer": "Yes. We do not require any personal information to donate. If you would also like to preserve your on-chain privacy, you may choose to use privacy tools (such as Railgun, Privacy Pools, or similar solutions) before bridging to Base and donating. Anonymity is fully respected."
+      },
+      {
+        "question": "What if I don't have funds on Base or Ethereum?",
+        "answer": "We have integrated Squid Router for your convenience. It supports various chains and tokens and allows you to swap directly to ETH or USDC on Base or Mainnet. You can also set our donation address as a recipient to avoid any additional transactions."
       }
     ]
   },
   "gallery": {
-    "title": "Photo Gallery",
-    "subtitle": "Take a look at life at the Straight Training Center and see the impact your donations can make in our students' lives.",
+    "title": "Quinta do Mocho",
+    "subtitle": "A neighbourhood full of talent, culture, and community — now growing a garden together.",
     "visitMessage": {
-      "title": "Visit Us in Person",
-      "description": "These photos capture just a glimpse of the amazing work happening at our center. We welcome visitors who want to see our impact firsthand and meet our incredible students and teachers in Zanzibar."
+      "title": "Join Us on March 9th",
+      "description": "Come to the first Volunteer Day and help us plant the garden that will feed the community for years to come. Located in Quinta do Mocho, Sacavém, just outside Lisbon."
     },
     "images": [
       {
         "src": "gallery-1.jpg",
-        "alt": "Students learning at computers in the training center",
-        "title": "Computer Training Sessions"
+        "alt": "Quinta do Mocho neighbourhood",
+        "title": "Quinta do Mocho"
       },
       {
         "src": "gallery-2.jpg",
-        "alt": "Students working on Raspberry Pi computers",
-        "title": "Hands-on Technology Learning"
+        "alt": "Community members working together",
+        "title": "Community in Action"
       },
       {
         "src": "gallery-3.jpg",
-        "alt": "Teacher instructing students in the classroom",
-        "title": "Collaborative Learning Environment"
+        "alt": "Urban garden beds",
+        "title": "The Garden Space"
       },
       {
         "src": "gallery-4.jpg",
-        "alt": "Group photo of students and teachers",
-        "title": "Our Amazing Community"
+        "alt": "Volunteers planting together",
+        "title": "Planting Day"
       }
     ]
   },
   "contact": {
-    "title": "Contact Us",
-    "subtitle": "Get in touch with the Straight Training Center. We'd love to hear from you and answer any questions about our programs.",
+    "title": "Get in Touch",
+    "subtitle": "Questions about the project or how to donate? Reach out to Amelia directly.",
     "methods": [
       {
-        "type": "Phone",
-        "value": "+255 678 585 256",
-        "label": "Call or WhatsApp",
-        "icon": "Phone",
-        "description": "Contact Modest directly for inquiries"
-      },
-      {
-        "type": "Email",
-        "value": "straighttrainingcenter@protonmail.com",
-        "label": "Email Address",
-        "icon": "Mail",
-        "description": "Send us an email for detailed inquiries"
-      },
-      {
-        "type": "WhatsApp",
-        "value": "+255 678 585 256",
-        "label": "WhatsApp",
+        "type": "Telegram",
+        "value": "@bitzu77",
+        "label": "Telegram",
         "icon": "MessageCircle",
-        "description": "Quick messaging via WhatsApp"
+        "description": "Message Amelia on Telegram for questions, item donations, or volunteer coordination"
       },
       {
         "type": "Location",
-        "value": "Fuoni Mambosasa, Zanzibar, Tanzania",
-        "label": "Physical Address",
+        "value": "Quinta do Mocho, Sacavém, Portugal",
+        "label": "Garden Location",
         "icon": "MapPin",
-        "description": "Visit us in person at our training center"
+        "description": "Just outside Lisbon — come visit on March 9th!"
       },
       {
         "type": "Hours",
-        "value": "Classes: 7:00 PM - 9:00 PM daily",
-        "label": "Operating Hours",
+        "value": "Volunteer Day: March 9th, 10:00 AM",
+        "label": "Next Event",
         "icon": "Clock",
-        "description": "Our regular teaching schedule"
+        "description": "First planting day — all welcome"
       }
     ],
     "socialMedia": [],
     "visitInfo": {
-      "title": "Visit Our Center",
-      "description": "We welcome visitors who want to see our work firsthand. Please contact us in advance to arrange a visit and meet our amazing students and teachers."
+      "title": "Volunteer Day – March 9th",
+      "description": "Join us at 10:00 AM on March 9th for the first planting day. Help clear the land, build garden beds, and plant the first vegetables and herbs alongside the Quinta do Mocho community."
     }
   },
   "walletAddresses": {
-    "ethereum": "0x601c5e1dcb301fe2fd0df34bc96c7237c91d73d8",
-    "bitcoin": "bc1qduj9sks7d7vct2y8tk4d6ve5frvx33vvftdscw"
+    "ethereum": "0x0000000000000000000000000000000000000000",
+    "bitcoin": "bc1placeholder000000000000000000000000000000"
   }
 }

@@ -7,7 +7,7 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl font-bold mb-4">
-            Thank you for supporting education in Zanzibar
+            Thank you for supporting the Quinta do Mocho Community Garden
           </h3>
           <p className="text-background/80 mb-8 max-w-2xl mx-auto">
             Every donation, no matter the size, makes a real difference in the lives of our students. 
@@ -25,7 +25,7 @@ export function Footer() {
           </Button>
           
           <div className="mt-8 pt-8 border-t border-background/20 text-background/60 text-sm">
-            <p>© 2025 Straight Training Center. Building futures through education.</p>
+            <p>© 2026 Quinta do Mocho Community Garden. Growing food, skills & opportunity.</p>
           </div>
         </div>
       </div>
