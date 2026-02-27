@@ -16,10 +16,10 @@ export function VideoSection() {
           <div className="relative rounded-xl overflow-hidden shadow-2xl mb-8 bg-black">
             <div className="aspect-video">
               <iframe
-                src="https://player.vimeo.com/video/661729589?h=a5b8a1f8c8&title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                src="https://drive.google.com/file/d/1fshpVbP8gYCSQ5MNjNR7ipY8gZvPuuq8/preview"
                 className="w-full h-full"
                 frameBorder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
+                allow="autoplay; fullscreen"
                 allowFullScreen
                 title="Quinta do Mocho Community Garden"
               />

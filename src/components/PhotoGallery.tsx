@@ -2,14 +2,12 @@ import { Card } from "@/components/ui/card";
 import gallery1 from "@/assets/gallery-1.jpg";
 import gallery2 from "@/assets/gallery-2.jpg";
 import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
 import data from "@/data.json";
 
 const imageAssets = {
   "gallery-1.jpg": gallery1,
   "gallery-2.jpg": gallery2,
-  "gallery-3.jpg": gallery3,
-  "gallery-4.jpg": gallery4
+  "gallery-3.jpg": gallery3
 };
 
 export function PhotoGallery() {
