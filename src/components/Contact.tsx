@@ -48,6 +48,7 @@ export const Contact = () => {
           {contact.methods.map((method, index) => {
             const IconComponent = iconMap[method.icon as keyof typeof iconMap];
             const isClickable = ["Phone", "Email", "WhatsApp"].includes(method.type);
+            const isLocation = method.type === "Location";
             
             return (
               <Card key={index} className="h-full hover:shadow-lg transition-shadow">
@@ -70,6 +71,20 @@ export const Contact = () => {
                       {method.value}
                       <ExternalLink className="ml-2 h-4 w-4" />
                     </Button>
+                  ) : isLocation && (method as any).mapsUrl ? (
+                    <>
+                      <p className="font-medium text-foreground mb-3">{method.value}</p>
+                      <a
+                        href={(method as any).mapsUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Button variant="outline" className="w-full">
+                          📍 View on Google Maps
+                          <ExternalLink className="ml-2 h-4 w-4" />
+                        </Button>
+                      </a>
+                    </>
                   ) : (
                     <p className="font-medium text-foreground">{method.value}</p>
                   )}
