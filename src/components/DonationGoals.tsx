@@ -146,10 +146,6 @@ export function DonationGoals() {
                                   <div className="font-mono">{usdc.base.balance} USDC</div>
                                   <div className="text-muted-foreground">${usdc.base.balanceUSD.toFixed(2)}</div>
                                 </div>
-                                <div className="col-span-2">
-                                  <span className="text-muted-foreground">BTC:</span>
-                                  <div className="font-mono">{btc.balance} BTC</div>
-                                  <div className="text-muted-foreground">${btc.balanceUSD.toFixed(2)}</div>
                                 </div>
                               </div>
                             </div>
