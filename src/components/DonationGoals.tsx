@@ -146,7 +146,6 @@ export function DonationGoals() {
                                   <div className="font-mono">{usdc.base.balance} USDC</div>
                                   <div className="text-muted-foreground">${usdc.base.balanceUSD.toFixed(2)}</div>
                                 </div>
-                                </div>
                               </div>
                             </div>
                           )}
