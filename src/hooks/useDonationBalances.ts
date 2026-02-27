@@ -19,20 +19,17 @@ export interface DonationBalances {
     mainnet: TokenBalance;
     base: TokenBalance;
   };
-  btc: TokenBalance;
   totalUSD: number;
   isLoading: boolean;
   error: string | null;
 }
 
 const DONATION_ADDRESS = data.walletAddresses.ethereum;
-const BTC_DONATION_ADDRESS = data.walletAddresses.bitcoin;
 
 // Free APIs for getting balances and prices
 const ALCHEMY_MAINNET_URL = 'https://eth.llamarpc.com';
 const ALCHEMY_BASE_URL = 'https://base.llamarpc.com';
 const COINGECKO_API = 'https://api.coingecko.com/api/v3';
-const BLOCKSTREAM_API = 'https://blockstream.info/api';
 
 const USDC_MAINNET = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48';
 const USDC_BASE = '0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913';
@@ -53,7 +50,6 @@ function storeBalances(balances: DonationBalances) {
     localStorage.setItem(STORAGE_KEY, JSON.stringify({
       eth: balances.eth,
       usdc: balances.usdc,
-      btc: balances.btc,
       totalUSD: balances.totalUSD
     }));
   } catch {
@@ -73,7 +69,7 @@ export function useDonationBalances(): DonationBalances {
       mainnet: { address: USDC_MAINNET, balance: '0', balanceUSD: 0, decimals: 6, symbol: 'USDC', network: 'mainnet' },
       base: { address: USDC_BASE, balance: '0', balanceUSD: 0, decimals: 6, symbol: 'USDC', network: 'base' }
     },
-    btc: storedBalances?.btc || { address: BTC_DONATION_ADDRESS, balance: '0', balanceUSD: 0, decimals: 8, symbol: 'BTC', network: 'bitcoin' },
+
     totalUSD: storedBalances?.totalUSD || 0,
     isLoading: !storedBalances,
     error: null
@@ -94,13 +90,13 @@ export function useDonationBalances(): DonationBalances {
 
         // Fetch prices first
         const priceResponse = await fetch(
-          `${COINGECKO_API}/simple/price?ids=ethereum,usd-coin,bitcoin&vs_currencies=usd`
+          `${COINGECKO_API}/simple/price?ids=ethereum,usd-coin&vs_currencies=usd`
         );
         const prices = await priceResponse.json();
         
         const ethPrice = prices.ethereum?.usd || 0;
         const usdcPrice = prices['usd-coin']?.usd || 1;
-        const btcPrice = prices.bitcoin?.usd || 0;
+        
 
         // Fetch ETH balance on Mainnet
         const ethMainnetResponse = await fetch(ALCHEMY_MAINNET_URL, {
