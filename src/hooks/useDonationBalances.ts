@@ -160,13 +160,12 @@ export function useDonationBalances(): DonationBalances {
         const usdcBaseData = await usdcBaseResponse.json();
         const usdcBaseBalance = parseInt(usdcBaseData.result || '0x0', 16) / 1e6;
 
-        // Fetch Bitcoin balance
         // Calculate total USD value
         const totalUSD = 
           (ethMainnetBalance * ethPrice) +
           (ethBaseBalance * ethPrice) +
           (usdcMainnetBalance * usdcPrice) +
-          (usdcBaseBalance * usdcPrice) +
+          (usdcBaseBalance * usdcPrice);
         if (isMounted) {
           const newBalances = {
             eth: {
@@ -205,11 +204,7 @@ export function useDonationBalances(): DonationBalances {
                 network: 'base'
               }
             },
-            btc: {
-              decimals: 8,
-              symbol: 'BTC',
-              network: 'bitcoin'
-            },
+
             totalUSD,
             isLoading: false,
             error: null
