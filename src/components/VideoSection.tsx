@@ -9,8 +9,7 @@ export function VideoSection() {
             Help Plant Food, Skills & <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent whitespace-nowrap">Opportunity</span>
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Join the Quinta do Mocho Community Garden project in Sacavém, Lisbon. 
-            Together, we can build a brighter future through education.
+            Join the Quinta do Mocho Community Garden project in Sacavém, Lisbon.
           </p>
           
           <div className="relative rounded-xl overflow-hidden shadow-2xl mb-8 bg-black">
