@@ -161,18 +161,12 @@ export function useDonationBalances(): DonationBalances {
         const usdcBaseBalance = parseInt(usdcBaseData.result || '0x0', 16) / 1e6;
 
         // Fetch Bitcoin balance
-        const btcResponse = await fetch(`${BLOCKSTREAM_API}/address/${BTC_DONATION_ADDRESS}`);
-        const btcData = await btcResponse.json();
-        const btcBalance = (btcData.chain_stats?.funded_txo_sum || 0) / 1e8; // Convert satoshis to BTC
-
         // Calculate total USD value
         const totalUSD = 
           (ethMainnetBalance * ethPrice) +
           (ethBaseBalance * ethPrice) +
           (usdcMainnetBalance * usdcPrice) +
           (usdcBaseBalance * usdcPrice) +
-          (btcBalance * btcPrice);
-
         if (isMounted) {
           const newBalances = {
             eth: {
@@ -212,9 +206,6 @@ export function useDonationBalances(): DonationBalances {
               }
             },
             btc: {
-              address: BTC_DONATION_ADDRESS,
-              balance: btcBalance.toFixed(8),
-              balanceUSD: btcBalance * btcPrice,
               decimals: 8,
               symbol: 'BTC',
               network: 'bitcoin'
