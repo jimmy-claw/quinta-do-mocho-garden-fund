@@ -15,7 +15,7 @@ const iconMap = {
 };
 
 export function DonationGoals() {
-  const { totalUSD, isLoading, error, eth, usdc, btc } = useDonationBalances();
+  const { totalUSD, isLoading, error, eth, usdc } = useDonationBalances();
   
   // Use real donation amount for the active goal (currently Yearly Rent - second goal)
   const realRaised = Math.round(totalUSD);
