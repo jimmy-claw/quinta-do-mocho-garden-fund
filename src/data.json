@@ -75,16 +75,6 @@
         "icon": "💵"
       },
       {
-        "value": "btc",
-        "label": "Bitcoin (BTC)",
-        "icon": "₿"
-      },
-      {
-        "value": "other",
-        "label": "Other Cryptocurrencies",
-        "icon": "🔄"
-      },
-      {
         "value": "eur",
         "label": "Euro Bank Transfer (EUR)",
         "icon": "🏦"
@@ -137,16 +127,6 @@
           "networks": [
             "Base Network"
           ]
-        }
-      ],
-      "btc": [
-        {
-          "type": "Bitcoin Network",
-          "address": "bc1placeholder000000000000000000000000000000",
-          "explorer": "https://blockstream.info/",
-          "explorerName": "Blockstream",
-          "color": "bg-gradient-to-r from-orange-500 to-orange-600",
-          "description": "Bitcoin wallet address coming soon"
         }
       ],
       "eur": [
@@ -256,7 +236,6 @@
     }
   },
   "walletAddresses": {
-    "ethereum": "0x3356D3aBd77D774Dc1aB2cd4daD1151A99F85d90",
-    "bitcoin": "bc1placeholder000000000000000000000000000000"
+    "ethereum": "0x3356D3aBd77D774Dc1aB2cd4daD1151A99F85d90"
   }
 }
