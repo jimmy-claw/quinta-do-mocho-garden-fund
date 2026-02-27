@@ -27,8 +27,32 @@ export interface DonationBalances {
 const DONATION_ADDRESS = data.walletAddresses.ethereum;
 
 // Free APIs for getting balances and prices
-const ALCHEMY_MAINNET_URL = 'https://eth.llamarpc.com';
-const ALCHEMY_BASE_URL = 'https://base.llamarpc.com';
+const MAINNET_RPCS = [
+  'https://cloudflare-eth.com',
+  'https://rpc.ankr.com/eth',
+  'https://eth.llamarpc.com',
+  'https://ethereum.publicnode.com',
+];
+const BASE_RPCS = [
+  'https://mainnet.base.org',
+  'https://rpc.ankr.com/base',
+  'https://base.llamarpc.com',
+  'https://base.publicnode.com',
+];
+
+async function fetchWithFallback(rpcs: string[], body: object): Promise<any> {
+  for (const rpc of rpcs) {
+    try {
+      const res = await fetch(rpc, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body),
+      });
+      if (res.ok) return res.json();
+    } catch { /* try next */ }
+  }
+  throw new Error('All RPCs failed');
+}
 const COINGECKO_API = 'https://api.coingecko.com/api/v3';
 
 const USDC_MAINNET = '0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48';
@@ -99,65 +123,29 @@ export function useDonationBalances(): DonationBalances {
         
 
         // Fetch ETH balance on Mainnet
-        const ethMainnetResponse = await fetch(ALCHEMY_MAINNET_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            jsonrpc: '2.0',
-            id: 1,
-            method: 'eth_getBalance',
-            params: [DONATION_ADDRESS, 'latest']
-          })
+        const ethMainnetData = await fetchWithFallback(MAINNET_RPCS, {
+            jsonrpc: '2.0', id: 1, method: 'eth_getBalance', params: [DONATION_ADDRESS, 'latest']
         });
-        const ethMainnetData = await ethMainnetResponse.json();
         const ethMainnetBalance = parseInt(ethMainnetData.result || '0x0', 16) / 1e18;
 
         // Fetch ETH balance on Base
-        const ethBaseResponse = await fetch(ALCHEMY_BASE_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            jsonrpc: '2.0',
-            id: 1,
-            method: 'eth_getBalance',
-            params: [DONATION_ADDRESS, 'latest']
-          })
+        const ethBaseData = await fetchWithFallback(BASE_RPCS, {
+            jsonrpc: '2.0', id: 1, method: 'eth_getBalance', params: [DONATION_ADDRESS, 'latest']
         });
-        const ethBaseData = await ethBaseResponse.json();
         const ethBaseBalance = parseInt(ethBaseData.result || '0x0', 16) / 1e18;
 
         // Fetch USDC balance on Mainnet
-        const usdcMainnetResponse = await fetch(ALCHEMY_MAINNET_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            jsonrpc: '2.0',
-            id: 1,
-            method: 'eth_call',
-            params: [{
-              to: USDC_MAINNET,
-              data: `0x70a08231000000000000000000000000${DONATION_ADDRESS.slice(2)}`
-            }, 'latest']
-          })
+        const usdcMainnetData = await fetchWithFallback(MAINNET_RPCS, {
+            jsonrpc: '2.0', id: 1, method: 'eth_call',
+            params: [{ to: USDC_MAINNET, data: `0x70a08231000000000000000000000000${DONATION_ADDRESS.slice(2)}` }, 'latest']
         });
-        const usdcMainnetData = await usdcMainnetResponse.json();
         const usdcMainnetBalance = parseInt(usdcMainnetData.result || '0x0', 16) / 1e6;
 
         // Fetch USDC balance on Base
-        const usdcBaseResponse = await fetch(ALCHEMY_BASE_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            jsonrpc: '2.0',
-            id: 1,
-            method: 'eth_call',
-            params: [{
-              to: USDC_BASE,
-              data: `0x70a08231000000000000000000000000${DONATION_ADDRESS.slice(2)}`
-            }, 'latest']
-          })
+        const usdcBaseData = await fetchWithFallback(BASE_RPCS, {
+            jsonrpc: '2.0', id: 1, method: 'eth_call',
+            params: [{ to: USDC_BASE, data: `0x70a08231000000000000000000000000${DONATION_ADDRESS.slice(2)}` }, 'latest']
         });
-        const usdcBaseData = await usdcBaseResponse.json();
         const usdcBaseBalance = parseInt(usdcBaseData.result || '0x0', 16) / 1e6;
 
         // Calculate total USD value
