@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import data from '@/data.json';
 
 export interface TokenBalance {
   address: string;
@@ -24,8 +25,8 @@ export interface DonationBalances {
   error: string | null;
 }
 
-const DONATION_ADDRESS = '0x601c5e1dcb301fe2fd0df34bc96c7237c91d73d8';
-const BTC_DONATION_ADDRESS = 'bc1qduj9sks7d7vct2y8tk4d6ve5frvx33vvftdscw';
+const DONATION_ADDRESS = data.walletAddresses.ethereum;
+const BTC_DONATION_ADDRESS = data.walletAddresses.bitcoin;
 
 // Free APIs for getting balances and prices
 const ALCHEMY_MAINNET_URL = 'https://eth.llamarpc.com';
