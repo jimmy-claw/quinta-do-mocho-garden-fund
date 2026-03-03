@@ -78,6 +78,11 @@
         "value": "eur",
         "label": "Euro Bank Transfer (EUR)",
         "icon": "🏦"
+      },
+      {
+        "value": "other",
+        "label": "Other Token (Squid Router)",
+        "icon": "🔄"
       }
     ],
     "methods": {
