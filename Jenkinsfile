@@ -39,7 +39,7 @@ pipeline {
     stage('Build') {
       steps {
         script {
-          nix.develop('npm build', pure: false)
+          nix.develop('npm run build', pure: false)
           jenkins.genBuildMetaJSON('build/build.json')
         }
       }
